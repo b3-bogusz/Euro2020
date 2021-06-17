@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
+import VideoList from "./VideoList";
 
 class App extends React.Component {
 
@@ -18,6 +19,7 @@ class App extends React.Component {
         return (
             <div className="ui container" style={{marginTop: '10px'}}>
                 <SearchBar onSubmit={this.onSearchSubmit}/>
+                <VideoList videos={this.state.videos} />
             </div>
         )
     }
